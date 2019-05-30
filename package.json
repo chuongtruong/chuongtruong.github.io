@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/chuongtruong/chuongtruong.github.io/issues"
   },
-  "homepage": "https://github.com/chuongtruong/chuongtruong.github.io#readme"
+  "homepage": "https://github.com/chuongtruong/chuongtruong.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
 }

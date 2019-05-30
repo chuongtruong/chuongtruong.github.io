@@ -1,5 +1,214 @@
-.img-thumbnail
-{
-    max-width: 50%;
-    height: auto;
+@import "https://fonts.googleapis.com/css?family=Raleway";
+body {
+  background-color: #ddd;
+  font-family: "Raleway", "Microsoft JhengHei", Arial, sans-serif;
+  color: #7a7b7c;
 }
+
+.jumbotron-fixed {
+    padding: 1rem 6rem;
+    background-color: white;
+    color: grey;
+}
+
+.navbar-nav > li > a, 
+.navbar > a  {
+    color: grey;
+}
+
+.user-profile {
+  width: 330px;
+  height: 110px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 0 2rem #babbbc;
+  animation: show-profile 0.5s forwards ease-in-out;
+}
+@keyframes show-profile {
+  0% {
+    width: 0;
+  }
+}
+.user-profile .photo {
+  width: 35%;
+  height: ;
+  border-radius: 50%;
+  border: 5px solid #fafafa;
+  margin-left: -50px;
+  box-shadow: 0 0 1rem #babbbc;
+  overflow: hidden;
+  animation: rotate-photo 0.5s forwards ease-in-out;
+}
+@keyframes rotate-photo {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.user-profile .photo img {
+  width: 100%;
+}
+.user-profile .profile-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.user-profile .profile-content::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 150px;
+  background-color: #e9f3e6;
+  z-index: -1;
+  top: -20px;
+  left: 0;
+  transform: rotate(-8deg);
+}
+.user-profile .profile-content .profile-info {
+  margin-top: 33px;
+  margin-left: 70px;
+}
+.user-profile .profile-content .profile-info h3,
+.user-profile .profile-content .profile-info h6 {
+  font-weight: normal;
+  margin: 4px 0;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+.user-profile .profile-btn {
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  transform: translateY(-50%);
+  top: 35px;
+  right: 30px;
+  cursor: pointer;
+  animation: popup-btn 0.3s both ease-in-out 0.3s;
+}
+@keyframes popup-btn {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.user-profile .profile-btn:hover {
+  box-shadow: 0 0 0 5px rgba(170, 187, 204, 0.5);
+}
+.user-profile .profile-btn span {
+  width: 23px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: to-burger 0.3s forwards ease-in-out;
+}
+.user-profile .profile-btn span::before, .user-profile .profile-btn span::after {
+  width: 23px;
+  height: 2px;
+  background-color: white;
+  content: "";
+  position: absolute;
+}
+.user-profile .profile-btn span::before {
+  margin-top: -7px;
+}
+.user-profile .profile-btn span::after {
+  margin-top: 7px;
+}
+.user-profile .profile-btn.active span {
+  animation: to-arrow 0.3s both ease-in-out;
+}
+.user-profile .profile-btn.active span::before, .user-profile .profile-btn.active span::after {
+  width: 90%;
+  right: -3px;
+}
+.user-profile .profile-btn.active span::before {
+  transform: rotate(45deg);
+}
+.user-profile .profile-btn.active span::after {
+  transform: rotate(-45deg);
+}
+@keyframes to-arrow {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(-180deg);
+  }
+}
+@keyframes to-burger {
+  from {
+    transform: translateX(-50%) rotate(-180deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+ 
+.menu {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  right: -60px;
+}
+.menu i {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  top: calc(100px - 50px/2);
+  box-shadow: 0 0 0.5rem #babbbc;
+  transition-duration: 0.3s;
+  font-size: 26px;
+  text-align: center;
+  line-height: 50px;
+  margin-left: 25px;
+}
+
+
+.open {
+  transition: 0.3s ease-in-out;
+  opacity: 0.5;
+}
+.open i {
+  left: 20px;
+  top: 55px;
+}
+.open i:nth-of-type(1) {
+  transform: rotate(-90deg) translateX(130px) rotate(90deg);
+  transition-delay: 0s;
+}
+.open i:nth-of-type(2) {
+  transform: rotate(0deg) translateX(130px) rotate(0deg);
+  transition-delay: 0.2s;
+}
+.open i:nth-of-type(3) {
+  transform: rotate(-270deg) translateX(130px) rotate(270deg);
+  transition-dela   y: 0.4s;
+}
+
+
