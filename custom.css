@@ -1,19 +1,52 @@
-@import "https://fonts.googleapis.com/css?family=Raleway";
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap');
+
+/* Main color:
+B8B42D - FFFCE8 - 3E363F - EEF5DB - DD403A */
+
+/* Animation documentations
+https://github.com/daneden/animate.css */
+
 body {
-  background-color: #ddd;
-  font-family: "Raleway", "Microsoft JhengHei", Arial, sans-serif;
-  color: #7a7b7c;
+  background-color: #FFFCE8;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #3E363F;
+  fo
 }
 
 .jumbotron-fixed {
-    padding: 1rem 6rem;
-    background-color: white;
+    padding: 2rem 10rem;
+    background-color: transparent;
     color: grey;
+}
+
+.nav-bar{
+    background-color: white;
 }
 
 .navbar-nav > li > a, 
 .navbar > a  {
     color: grey;
+}
+
+.navbar-brand{
+  font-family: 'Source Sans Pro', sans-serif;;
+}
+
+.message{
+  max-width: 70%;
+  background-color: #EEF5DB;
+  border-radius: 10px;
+  padding: 1%;
+  -webkit-box-shadow: 9px 10px 17px 0px rgba(0,0,0,0.23);
+-moz-box-shadow: 9px 10px 17px 0px rgba(0,0,0,0.23);
+box-shadow: 9px 10px 17px 0px rgba(0,0,0,0.23);
+
+}
+
+.message>.message-contents>h1
+{
+  font-family: 'Playfair Display', serif ;
+
 }
 
 .user-profile {
