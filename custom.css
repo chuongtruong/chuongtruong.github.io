@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap');
 
 /* Main color:
-B8B42D - FFFCE8 - 3E363F - EEF5DB - DD403A */
+eafdf8-226f54-87c38f-feffed-c9c9c9 */
 
 /* Animation documentations
 https://github.com/daneden/animate.css */
@@ -9,8 +9,7 @@ https://github.com/daneden/animate.css */
 body {
   background-color: #FFFCE8;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #3E363F;
-  fo
+  background: #eafdf8;
 }
 
 .jumbotron-fixed {
@@ -39,12 +38,11 @@ body {
 
 .message{
   max-width: 70%;
-  background-color: #EEF5DB;
-  border-radius: 10px;
+  background-color: #feffed;
+  border-radius: 2px;
   padding: 1%;
-  -webkit-box-shadow: 9px 10px 17px 0px rgba(0,0,0,0.23);
--moz-box-shadow: 9px 10px 17px 0px rgba(0,0,0,0.23);
-box-shadow: 9px 10px 17px 0px rgba(0,0,0,0.23);
+  color: #226F54;
+
 
 }
 
